@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #d7f0f1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p:nth-child(1) {
+    margin-bottom: 5px;
+    color: hotpink;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+p:nth-child(2) {
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+.card {
+    margin-top: 20px;
+    height: 0;
+    width: 0;
+    border-top: 100px solid #eee;
+    border-right: 170px solid #ddd;
+    border-left: 170px solid #ccc;
+    border-bottom: 100px solid #ccc;
+}
+
+.heart {
+    width: 32px;
+    height: 32px;
+    background-color: #ff3838;
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: heartbeat 1.4s linear infinite;
+}
+
+.heart::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff3838;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff3838;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg) scale(1);
+    }
+
+    25% {
+        transform: translate(-50%, -50%) rotate(45deg) scale(1);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) rotate(45deg) scale(1.4);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
+    }
+
+    75% {
+        transform: translate(-50%, -50%) rotate(45deg) scale(1.4);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(45deg) scale(1);
+    }
+}
